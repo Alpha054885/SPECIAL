@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="spCoverGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e131d"/>
+      <stop offset="50%" stop-color="#2d1a29"/>
+      <stop offset="100%" stop-color="#110d14"/>
+    </linearGradient>
+    <radialGradient id="spPinkSpot" cx="50%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#ff7597" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#ff7597" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  
+  <rect width="500" height="500" fill="url(#spCoverGrad)"/>
+  <circle cx="250" cy="200" r="180" fill="url(#spPinkSpot)"/>
+  
+  <!-- Retro Cassette Tape / Music Album Graphic -->
+  <g transform="translate(100, 100)">
+    <!-- Cassette body -->
+    <rect x="0" y="20" width="300" height="190" rx="16" fill="#1b1722" stroke="#ff7597" stroke-width="4"/>
+    <rect x="25" y="45" width="250" height="100" rx="10" fill="#fffdfa"/>
+    
+    <!-- Cassette Label -->
+    <text x="150" y="70" text-anchor="middle" font-family="'Patrick Hand', cursive, sans-serif" font-size="22" font-weight="bold" fill="#ff4d6d">
+      OUR SPECIAL MIXTAPE 🎵
+    </text>
+
+    <!-- Wheels -->
+    <circle cx="95" cy="102" r="26" fill="#1b1722" stroke="#ff7597" stroke-width="3"/>
+    <circle cx="95" cy="102" r="10" fill="#ffe5ec"/>
+    <circle cx="205" cy="102" r="26" fill="#1b1722" stroke="#ff7597" stroke-width="3"/>
+    <circle cx="205" cy="102" r="10" fill="#ffe5ec"/>
+    <line x1="95" y1="102" x2="205" y2="102" stroke="#ffe5ec" stroke-width="2" stroke-dasharray="4,4"/>
+
+    <!-- Bottom cutouts -->
+    <polygon points="50,210 250,210 220,180 80,180" fill="#2d2232" stroke="#ff7597" stroke-width="2"/>
+  </g>
+
+  <!-- Title overlay -->
+  <text x="250" y="375" text-anchor="middle" font-family="'Caveat', cursive, sans-serif" font-size="36" font-weight="bold" fill="#fff">
+    Dedicated to My Duffer 💖
+  </text>
+  <text x="250" y="415" text-anchor="middle" font-family="'Nunito', sans-serif" font-size="18" fill="#ffb3c6">
+    Tap 'Swap Photos Live' to put your photo here!
+  </text>
+  <text x="250" y="445" text-anchor="middle" font-family="'Nunito', sans-serif" font-size="14" fill="#a89aa7">
+    Spotify Special Edition • Men's Day 2026
+  </text>
+</svg>

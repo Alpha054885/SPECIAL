@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#341e2a"/>
+      <stop offset="100%" stop-color="#19121d"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#bgGrad2)"/>
+  
+  <!-- Cute Smiling Coffee & Heart doodle -->
+  <g transform="translate(130, 110)">
+    <!-- Cup -->
+    <path d="M 20 40 L 30 130 C 32 150, 118 150, 120 130 L 130 40 Z" fill="#ffb3c6" stroke="#fff" stroke-width="4"/>
+    <!-- Handle -->
+    <path d="M 125 55 C 155 55, 155 110, 122 115" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+    <!-- Cute Face on Cup -->
+    <circle cx="60" cy="85" r="5" fill="#1b1722"/>
+    <circle cx="90" cy="85" r="5" fill="#1b1722"/>
+    <path d="M 70 95 Q 75 105 80 95" fill="none" stroke="#1b1722" stroke-width="3" stroke-linecap="round"/>
+    <!-- Cheeks -->
+    <circle cx="50" cy="92" r="6" fill="#ff4d6d" opacity="0.6"/>
+    <circle cx="100" cy="92" r="6" fill="#ff4d6d" opacity="0.6"/>
+    <!-- Steam Heart -->
+    <path d="M 75 15 C 65 -5, 45 5, 75 30 C 105 5, 85 -5, 75 15 Z" fill="#ff7597"/>
+  </g>
+
+  <text x="60" y="80" font-size="28" fill="#ffb3c6">⭐</text>
+  <text x="320" y="90" font-size="28" fill="#ffb3c6">✨</text>
+  <text x="320" y="320" font-size="24" fill="#ffb3c6">💕</text>
+
+  <text x="200" y="315" text-anchor="middle" font-family="'Caveat', cursive, sans-serif" font-size="26" font-weight="bold" fill="#ffe5ec">
+    My Cute Duffer
+  </text>
+  <text x="200" y="345" text-anchor="middle" font-family="'Nunito', sans-serif" font-size="14" fill="#ffb3c6">
+    (Click 'Swap Photos Live' to add yours!)
+  </text>
+</svg>

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 340" width="100%" height="100%">
+  <defs>
+    <linearGradient id="gGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2c1a27"/>
+      <stop offset="100%" stop-color="#141118"/>
+    </linearGradient>
+  </defs>
+  <rect width="450" height="340" fill="url(#gGrad3)"/>
+  
+  <!-- Starry / Magical Doodle -->
+  <g transform="translate(145, 60)">
+    <circle cx="80" cy="80" r="70" fill="none" stroke="#ff7597" stroke-width="3" stroke-dasharray="6,6"/>
+    <text x="80" y="90" text-anchor="middle" font-size="50">📸</text>
+  </g>
+
+  <text x="70" y="80" font-size="28" fill="#ffe5ec">✨</text>
+  <text x="360" y="100" font-size="28" fill="#ffe5ec">⭐</text>
+  <text x="80" y="250" font-size="26" fill="#ff7597">🌸</text>
+  <text x="350" y="240" font-size="26" fill="#ff7597">💖</text>
+
+  <text x="225" y="260" text-anchor="middle" font-family="'Caveat', cursive, sans-serif" font-size="28" font-weight="bold" fill="#fff">
+    "Look at this angle!" ✨
+  </text>
+  <text x="225" y="290" text-anchor="middle" font-family="'Nunito', sans-serif" font-size="14" fill="#ffb3c6">
+    (Clicked by you for me)
+  </text>
+</svg>
