@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#121016">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>Happy Men's Day, Duffer! 💖</title>
+  
+  <!-- Google Fonts: Handwritten & Scrapbook Aesthetics -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Patrick+Hand&family=Nunito:wght@400;600;700;800;900&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Canvas Confetti for celebrations -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Floating cute doodle stickers in background -->
+  <div class="background-decorations" aria-hidden="true">
+    <span class="doodle d-star-1">⭐</span>
+    <span class="doodle d-heart-1">💖</span>
+    <span class="doodle d-sparkle-1">✨</span>
+    <span class="doodle d-star-2">✨</span>
+    <span class="doodle d-heart-2">🌸</span>
+    <span class="doodle d-sparkle-2">💫</span>
+    <span class="doodle d-tape-bg"></span>
+  </div>
+
+  <!-- Audio player -->
+  <audio id="audioElement" src="assets/music/piya_o_re_piya.mp3" preload="auto"></audio>
+
+  <!-- Sound Toggle Button & Instant Photo Customizer helper pill -->
+  <header class="top-nav">
+    <div class="logo-pill">
+      <span class="dot"></span> Happy Men's Day Special 🎀
+    </div>
+    <div class="action-buttons">
+      <button id="bgSoundBtn" class="pill-btn" title="Toggle cute sound effects">
+        <i class="fa-solid fa-volume-high"></i> <span>Sound: ON</span>
+      </button>
+      <button id="photoHelpBtn" class="pill-btn highlight-btn" title="Easily upload or drop your photos">
+        <i class="fa-solid fa-wand-magic-sparkles"></i> <span>Swap Photos Live</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Scrapbook Container -->
+  <main class="scrapbook-wrapper">
+
+    <!-- Progress Indicator / Scrapbook bookmarks -->
+    <div class="scrapbook-tabs">
+      <button class="tab-btn active" data-step="1">1. Welcome</button>
+      <button class="tab-btn" data-step="2">2. Letter & Memories</button>
+      <button class="tab-btn" data-step="3">3. 3 Promises</button>
+      <button class="tab-btn" data-step="4">4. Our Song</button>
+      <button class="tab-btn" data-step="5">5. Photos & Likes</button>
+    </div>
+
+    <!-- ==============================================
+         SLIDE 1: WELCOME / INTRO
+         ============================================== -->
+    <section class="scrapbook-page active" id="step1">
+      <div class="page-content center-layout">
+        
+        <div class="scrapbook-card intro-card">
+          <!-- Washi tape at top -->
+          <div class="washi-tape tape-top-center tape-pink-dots"></div>
+          <div class="paper-pin pin-top-right"></div>
+          
+          <div class="badge-tag">Nov 19 • International Men's Day</div>
+
+          <h1 class="main-title">
+            Happy Men's Day! <span class="heart-pulse">💖</span>
+          </h1>
+
+          <div class="sub-greeting">
+            <span class="handwritten-accent">To my favorite duffer... 💕</span>
+          </div>
+
+          <!-- Interactive Gift Box / Cute Illustration -->
+          <div class="gift-box-wrapper" id="giftBoxTrigger">
+            <div class="gift-box">
+              <div class="gift-lid"></div>
+              <div class="gift-ribbon"></div>
+              <div class="gift-body">
+                <span class="gift-emoji">🎁</span>
+              </div>
+            </div>
+            <div class="sparkles-container">
+              <span>✨</span><span>🌸</span><span>✨</span>
+            </div>
+            <p class="tap-hint">Tap the gift or click below to unwrap your cute surprise! 💌</p>
+          </div>
+
+          <div class="page-actions">
+            <button class="next-btn primary-craft-btn" onclick="goToStep(2)">
+              <span>Next • Open Scrapbook</span> <i class="fa-solid fa-arrow-right-long"></i>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==============================================
+         SLIDE 2: LETTER & 3 PHOTOS
+         ============================================== -->
+    <section class="scrapbook-page" id="step2">
+      <div class="page-content split-layout">
+
+        <!-- Left: Heartfelt Letter -->
+        <div class="scrapbook-card letter-card">
+          <div class="washi-tape tape-top-left tape-black-stripe"></div>
+          <div class="stamp-badge">FOR YOU 💌</div>
+
+          <div class="letter-paper">
+            <h2 class="letter-heading">Dear Duffer,</h2>
+            <div class="letter-body handwritten-text">
+              <p>
+                Happy Men's Day to the most special, silly, and sweetest human in my life! ✨
+              </p>
+              <p>
+                Remember when you met me on your birthday? That day will always be one of my favorite memories. Hahaha, honestly, I hadn't really noticed you that much back then. We didn't even get to meet properly, and I left that night without really sitting with you. But whatever little time we spent together was nice! You make even the simplest days feel so warm, chaotic in the best way, and genuinely happy.
+              </p>
+              <p>
+                Thank you for being so patient, for putting up with my drama and tantrums 😂. You deserve all the love, happiness, and peace in this whole world today and every day.
+              </p>
+              <p class="letter-sign">
+                Forever your favorite headache, ummmm bodmmm! <br>
+                <span>With all my affection so called bhaw👀,</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: 3 Polaroid Photos -->
+        <div class="scrapbook-card polaroids-container">
+          <div class="washi-tape tape-top-right tape-pink-grid"></div>
+          
+          <div class="section-title-tag">
+            <i class="fa-solid fa-camera-retro"></i> Our Favorite Moments
+          </div>
+
+          <div class="polaroids-grid">
+            
+            <!-- Polaroid 1 -->
+            <div class="polaroid-frame polaroid-1" onclick="previewImage(this)">
+              <div class="tape-corner tape-top"></div>
+              <div class="img-wrapper">
+                <img id="polaroidImg1" src="assets/images/polaroid1.png" alt="kitha sote ho yr">
+              </div>
+              <p class="polaroid-caption">kitha sote ho yr 😴</p>
+            </div>
+
+            <!-- Polaroid 2 -->
+            <div class="polaroid-frame polaroid-2" onclick="previewImage(this)">
+              <div class="tape-corner tape-top-left-angle"></div>
+              <div class="img-wrapper">
+                <img id="polaroidImg2" src="assets/images/polaroid2.jpg" alt="Mirror Selfie">
+              </div>
+              <p class="polaroid-caption">The ultimate cute duffer 😜</p>
+            </div>
+
+            <!-- Polaroid 3 -->
+            <div class="polaroid-frame polaroid-3" onclick="previewImage(this)">
+              <div class="tape-corner tape-top-right-angle"></div>
+              <div class="img-wrapper">
+                <img id="polaroidImg3" src="assets/images/polaroid3.jpg" alt="Matching outfits">
+              </div>
+              <p class="polaroid-caption">Matching is inevitable 💕</p>
+            </div>
+
+          </div>
+
+          <div class="polaroid-tip">
+            <small>💡 Click on any photo to zoom in! (You can also swap with your real photos)</small>
+          </div>
+
+          <!-- Bottom Navigation -->
+          <div class="page-actions spread-actions">
+            <button class="back-btn secondary-craft-btn" onclick="goToStep(1)">
+              <i class="fa-solid fa-arrow-left-long"></i> <span>Back</span>
+            </button>
+            <button class="next-btn primary-craft-btn" onclick="goToStep(3)">
+              <span>Next • 3 Promises</span> <i class="fa-solid fa-arrow-right-long"></i>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==============================================
+         SLIDE 3: 3 PROMISES
+         ============================================== -->
+    <section class="scrapbook-page" id="step3">
+      <div class="page-content center-layout">
+
+        <div class="scrapbook-card promises-card">
+          <div class="washi-tape tape-top-center tape-pink-dots"></div>
+          
+          <div class="badge-tag">Pinky Promises 🤙</div>
+          <h2 class="main-title section-header">3 Sweet Promises For You</h2>
+          <p class="sub-lead">Touch each wax-sealed envelope to unveil the promise inside! 💌</p>
+
+          <div class="promises-grid">
+            
+            <!-- Promise 1 -->
+            <div class="promise-box" onclick="flipPromise(this)">
+              <div class="promise-inner">
+                <div class="promise-front">
+                  <div class="wax-seal">1</div>
+                  <span class="promise-label">Promise #1</span>
+                  <p class="click-reveal-hint"><i class="fa-solid fa-hand-pointer"></i> Tap to open</p>
+                </div>
+                <div class="promise-back">
+                  <div class="washi-tape-mini"></div>
+                  <h3>Always Listening 👂</h3>
+                  <p>
+                    I promise to always listen to your rants, silly thoughts, and work stress — even when you think you're rambling, I'm all ears!
+                  </p>
+                  <span class="promise-footnote">(Aur hamesha tumhara dimaag khane ka haq sirf mera hoga! 😜)</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Promise 2 -->
+            <div class="promise-box" onclick="flipPromise(this)">
+              <div class="promise-inner">
+                <div class="promise-front">
+                  <div class="wax-seal">2</div>
+                  <span class="promise-label">Promise #2</span>
+                  <p class="click-reveal-hint"><i class="fa-solid fa-hand-pointer"></i> Tap to open</p>
+                </div>
+                <div class="promise-back">
+                  <div class="washi-tape-mini"></div>
+                  <h3>Sharing My World 🍦🍔</h3>
+                  <p>
+                    I promise to always share my happiness, my snacks (well, at least last part of my cone and ill share my burger with u but jhootha khana padega), and to be your biggest cheerleader in everything you dream of doing.
+                  </p>
+                  <span class="promise-footnote">(No one gets to support you louder than me! 📣❤️)</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Promise 3 -->
+            <div class="promise-box" onclick="flipPromise(this)">
+              <div class="promise-inner">
+                <div class="promise-front">
+                  <div class="wax-seal">3</div>
+                  <span class="promise-label">Promise #3</span>
+                  <p class="click-reveal-hint"><i class="fa-solid fa-hand-pointer"></i> Tap to open</p>
+                </div>
+                <div class="promise-back">
+                  <div class="washi-tape-mini"></div>
+                  <h3>Standing by Your Side 🤝</h3>
+                  <p>
+                    Through good days, tough days, and the utterly crazy days — I promise to stand firmly by your side. You will never have to face a rough time alone.
+                  </p>
+                  <span class="promise-footnote">(Always your safe space and home. 🏡💖)</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="page-actions spread-actions mt-4">
+            <button class="back-btn secondary-craft-btn" onclick="goToStep(2)">
+              <i class="fa-solid fa-arrow-left-long"></i> <span>Back</span>
+            </button>
+            <button class="next-btn primary-craft-btn" onclick="goToStep(4)">
+              <span>Next • Our Spotify Song</span> <i class="fa-solid fa-arrow-right-long"></i>
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==============================================
+         SLIDE 4: SPOTIFY VIBE & DEDICATED SONG + LETTER
+         ============================================== -->
+    <section class="scrapbook-page" id="step4">
+      <div class="page-content split-layout">
+
+        <!-- Left: Spotify Player Card -->
+        <div class="scrapbook-card spotify-container">
+          <div class="washi-tape tape-top-left tape-black-stripe"></div>
+
+          <!-- Spotify Branding Header -->
+          <div class="spotify-header">
+            <div class="spotify-brand">
+              <svg class="spotify-logo-svg" viewBox="0 0 167.5 167.5" width="28" height="28">
+                <circle cx="83.8" cy="83.8" r="83.8" fill="#1ED760"/>
+                <path d="M118.9 120.8c-1.4 2.3-4.4 3.1-6.7 1.7-18.4-11.2-41.5-13.8-68.8-7.5-2.6.6-5.2-1-5.8-3.6-.6-2.6 1-5.2 3.6-5.8 30-6.8 55.6-3.9 76 8.5 2.3 1.4 3 4.4 1.7 6.7zm9-20c-1.8 2.9-5.6 3.8-8.5 2-21-12.9-53.1-16.7-78-9.1-3.3 1-6.8-.9-7.8-4.2s.9-6.8 4.2-7.8c28.5-8.6 64-4.5 88.1 10.3 2.9 1.8 3.8 5.6 2 8.8zm.8-20.9c-25.2-15-66.8-16.3-90.9-9-3.9 1.2-8-1.1-9.2-4.9-1.2-3.9 1.1-8 4.9-9.2 27.6-8.4 73.6-6.8 102.7 10.5 3.5 2.1 4.7 6.6 2.6 10.1-2.1 3.5-6.6 4.7-10.1 2.5z" fill="#000000"/>
+              </svg>
+              <span class="spotify-app-name">Spotify</span>
+            </div>
+            <div class="playlist-tag">Piya O Re Piya • Atif Aslam & Shreya Ghoshal</div>
+          </div>
+
+          <!-- Album Art Cover (Tere Naal Love Ho Gaya from screenshot) -->
+          <div class="spotify-album-cover">
+            <img id="spotifyAlbumImg" src="assets/images/spotify-cover.jpg" alt="Tere Naal Love Ho Gaya - Piya O Re Piya">
+            <div class="vinyl-disc" id="vinylDisc">
+              <div class="vinyl-inner"></div>
+            </div>
+          </div>
+
+          <!-- Track Info -->
+          <div class="spotify-track-meta">
+            <div class="track-text">
+              <h3 class="track-title" id="trackTitle">Your Special Track 🎵</h3>
+              <p class="track-artist" id="trackArtist">Ur Favourite Song</p>
+            </div>
+            <button class="spotify-heart-btn active" id="spotifyLikeBtn" onclick="toggleSpotifyHeart()">
+              <i class="fa-solid fa-heart"></i>
+            </button>
+          </div>
+
+          <!-- Progress Bar -->
+          <div class="spotify-progress-container">
+            <div class="progress-bar-bg" id="progressBarBg" onclick="seekAudio(event)">
+              <div class="progress-bar-fill" id="progressBarFill"></div>
+              <div class="progress-handle" id="progressHandle"></div>
+            </div>
+            <div class="time-stamps">
+              <span id="currentTime">0:00</span>
+              <span id="totalDuration">4:52</span>
+            </div>
+          </div>
+
+          <!-- Spotify Controls -->
+          <div class="spotify-controls">
+            <button class="sp-btn" onclick="triggerShuffle()"><i class="fa-solid fa-shuffle"></i></button>
+            <button class="sp-btn" onclick="restartTrack()"><i class="fa-solid fa-backward-step"></i></button>
+            <button class="sp-btn sp-play-btn" id="mainPlayBtn" onclick="toggleAudioPlay()">
+              <i class="fa-solid fa-play" id="playIcon"></i>
+            </button>
+            <button class="sp-btn" onclick="restartTrack()"><i class="fa-solid fa-forward-step"></i></button>
+            <button class="sp-btn" onclick="toggleLoop()"><i class="fa-solid fa-repeat"></i></button>
+          </div>
+
+          <!-- Audio Equalizer Animation -->
+          <div class="sound-waves" id="soundWaves">
+            <span></span><span></span><span></span><span></span><span></span><span></span>
+          </div>
+
+          <div class="spotify-hint">
+            <small>🎧 (Tap play to listen! You can easily put your own favorite song and cover photo)</small>
+          </div>
+
+        </div>
+
+        <!-- Right: Musical Love Letter -->
+        <div class="scrapbook-card letter-card musical-letter">
+          <div class="washi-tape tape-top-right tape-pink-dots"></div>
+          <div class="music-note-badge">💭 SPECIAL NOTE</div>
+
+          <div class="letter-paper">
+            <h2 class="letter-heading">Some Deep and Special</h2>
+            <div class="letter-body handwritten-text">
+              <p>
+                Some things are just too precious. No matter how hard we try, we can't get them out of our lives. But if something isn't yours anymore, you should at least try to let it go.
+              </p>
+              <p>
+                I used to believe that memories are always special, but the reality is that memories are special only until they start hurting you.
+              </p>
+              <p>
+                I'm not telling you to take the ring off. Honestly, I don't even want it that way. I am repeating mei sach mei glt intension ya jealousy mei nhi bol rhi hun. But as long as that ring is still on your finger, I don't think you'll ever truly move on. Just give it a try. Either give your ex another chance or free yourself from the memories attached to that ring.
+              </p>
+              <p>
+                Nobody has probably ever asked you why you're still wearing that ring or told you to give your ex another chance, because maybe you don't have someone that close to you who would actually say these things to your face.
+              </p>
+              <p>
+                And if anything I said hurt you, I'm sorry. You can simply ignore it, okay? I felt it's better to say it than keep it to myself. I don't want to pretend to be a good person in front of you; I genuinely want to be a good friend to you. And I think we already are. ❤️
+              </p>
+              <div class="lyrics-snippet">
+                acha chalo ab apna song suno happy hokr mei bht sunti hun wese ye song hahah Happy hokr suno kuch acha hi soch kr suno tmhara favourite jo hain😂 🎧
+              </div>
+            </div>
+          </div>
+
+          <div class="page-actions spread-actions mt-auto">
+            <button class="back-btn secondary-craft-btn" onclick="goToStep(3)">
+              <i class="fa-solid fa-arrow-left-long"></i> <span>Back</span>
+            </button>
+            <button class="next-btn primary-craft-btn" onclick="goToStep(5)">
+              <span>Next • Special Photos & Likes</span> <i class="fa-solid fa-arrow-right-long"></i>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==============================================
+         SLIDE 5: SPECIAL PHOTOS & LIKES GALLERY
+         ============================================== -->
+    <section class="scrapbook-page" id="step5">
+      <div class="page-content center-layout">
+
+        <div class="scrapbook-card gallery-card">
+          <div class="washi-tape tape-top-center tape-black-stripe"></div>
+          
+          <div class="badge-tag">Crafted With Love 📸</div>
+          <h2 class="main-title section-header">Special Photos You Share With Me & Click For Me</h2>
+          <p class="sub-lead">
+            Every photo you send or click has its own special vibe. Tap the heart to give them unlimited likes! 💕
+          </p>
+
+          <!-- Interactive Filter Tabs -->
+          <div class="filter-pills">
+            <button class="filter-btn active" onclick="filterGallery('all')">All Snaps ✨</button>
+            <button class="filter-btn" onclick="filterGallery('clicked')">Clicked by You 📸</button>
+            <button class="filter-btn" onclick="filterGallery('shared')">Shared with Me 💌</button>
+          </div>
+
+          <!-- Photo Grid with Like Buttons -->
+          <div class="gallery-grid" id="galleryGrid">
+            
+            <!-- Photo Card 1 -->
+            <div class="gallery-item" data-category="clicked" onclick="previewImage(this)">
+              <div class="tape-corner tape-top-left-angle"></div>
+              <div class="gallery-img-box">
+                <img id="galleryImg1" src="assets/images/gallery1.jpg" alt="Signature Pose">
+                <span class="category-badge">Shared with Me 💌</span>
+              </div>
+              <div class="gallery-info">
+                <h4>The Signature Duffer Pose ✌️</h4>
+                <p>Peace sign, spectacles, and that iconic sweet smile.</p>
+                <div class="like-action-bar">
+                  <button class="like-heart-btn" onclick="event.stopPropagation(); hitLike(this, 'likeCount1')">
+                    <i class="fa-solid fa-heart"></i> <span class="like-label">Love</span>
+                  </button>
+                  <span class="like-counter" id="likeCount1">520</span> likes
+                </div>
+              </div>
+            </div>
+
+            <!-- Photo Card 2 -->
+            <div class="gallery-item" data-category="shared" onclick="previewImage(this)">
+              <div class="tape-corner tape-top-right-angle"></div>
+              <div class="gallery-img-box">
+                <img id="galleryImg2" src="assets/images/gallery2.jpg" alt="Travel Candid">
+                <span class="category-badge">You Clicked This 📸</span>
+              </div>
+              <div class="gallery-info">
+                <h4>The Traveling Candid 🚆</h4>
+                <p>Lost in deep thoughts... thinking of me or food? 😜</p>
+                <div class="like-action-bar">
+                  <button class="like-heart-btn" onclick="event.stopPropagation(); hitLike(this, 'likeCount2')">
+                    <i class="fa-solid fa-heart"></i> <span class="like-label">Love</span>
+                  </button>
+                  <span class="like-counter" id="likeCount2">380</span> likes
+                </div>
+              </div>
+            </div>
+
+            <!-- Photo Card 3 -->
+            <div class="gallery-item" data-category="shared" onclick="previewImage(this)">
+              <div class="tape-corner tape-top"></div>
+              <div class="gallery-img-box">
+                <img id="galleryImg3" src="assets/images/gallery3.jpg" alt="Hoodie Smile">
+                <span class="category-badge">Shared with Me 💌</span>
+              </div>
+              <div class="gallery-info">
+                <h4>That Hoodie Comfort Vibe 🌸</h4>
+                <p>A sweet, gentle snap that instantly makes everything lighter.</p>
+                <div class="like-action-bar">
+                  <button class="like-heart-btn" onclick="event.stopPropagation(); hitLike(this, 'likeCount3')">
+                    <i class="fa-solid fa-heart"></i> <span class="like-label">Love</span>
+                  </button>
+                  <span class="like-counter" id="likeCount3">640</span> likes
+                </div>
+              </div>
+            </div>
+
+            <!-- Photo Card 4 -->
+            <div class="gallery-item" data-category="clicked" onclick="previewImage(this)">
+              <div class="tape-corner tape-top-left-angle"></div>
+              <div class="gallery-img-box">
+                <img id="galleryImg4" src="assets/images/gallery4.jpg" alt="Festival Lights and Puppy">
+                <span class="category-badge">Special Memory 🪔</span>
+              </div>
+              <div class="gallery-info">
+                <h4>Festival Lights & Furry Friend 🐾</h4>
+                <p>The sweetest human with the gentlest soul holding a cute puppy.</p>
+                <div class="like-action-bar">
+                  <button class="like-heart-btn" onclick="event.stopPropagation(); hitLike(this, 'likeCount4')">
+                    <i class="fa-solid fa-heart"></i> <span class="like-label">Love</span>
+                  </button>
+                  <span class="like-counter" id="likeCount4">750</span> likes
+                </div>
+              </div>
+            </div>
+
+            <!-- Photo Card 5 -->
+            <div class="gallery-item" data-category="shared" onclick="previewImage(this)">
+              <div class="tape-corner tape-top-right-angle"></div>
+              <div class="gallery-img-box">
+                <img id="galleryImg5" src="assets/images/gallery5.jpg" alt="Two Cuties">
+                <span class="category-badge">Cutest Duo 🐶</span>
+              </div>
+              <div class="gallery-info">
+                <h4>Two Cuties in One Frame 💕</h4>
+                <p>Both posing for the camera! Honestly, can't decide who is cuter! 😂</p>
+                <div class="like-action-bar">
+                  <button class="like-heart-btn" onclick="event.stopPropagation(); hitLike(this, 'likeCount5')">
+                    <i class="fa-solid fa-heart"></i> <span class="like-label">Love</span>
+                  </button>
+                  <span class="like-counter" id="likeCount5">999</span> likes
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Grand Final Celebration Button -->
+          <div class="grand-finale-box">
+            <h3>And that's why you're one of a kind! 🌟</h3>
+            <p>Happy Men's Day once again to my favorite human.</p>
+            <button class="celebrate-btn" onclick="triggerGrandConfetti()">
+              <i class="fa-solid fa-champagne-glasses"></i> Celebrate with Confetti! 🎉
+            </button>
+          </div>
+
+          <!-- Bottom Nav -->
+          <div class="page-actions spread-actions mt-4">
+            <button class="back-btn secondary-craft-btn" onclick="goToStep(4)">
+              <i class="fa-solid fa-arrow-left-long"></i> <span>Back</span>
+            </button>
+            <button class="next-btn primary-craft-btn" onclick="goToStep(1)">
+              <i class="fa-solid fa-rotate-left"></i> <span>Start Again</span>
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==============================================
+       PHOTO CUSTOMIZER MODAL (So she or you can test/swap photos live)
+       ============================================== -->
+  <div class="customizer-modal" id="customizerModal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3><i class="fa-solid fa-wand-magic-sparkles"></i> Live Photo & Song Setup</h3>
+        <button class="close-modal-btn" onclick="closeCustomizer()">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p class="modal-desc">
+          Aap easily yahan se real photos upload karke live preview dekh sakti hain, ya phir <code>assets/images/</code> folder mein photos daal sakti hain!
+        </p>
+
+        <div class="custom-fields">
+          <div class="field-row">
+            <label>3 Polaroid Photos (Step 2):</label>
+            <div class="input-group">
+              <input type="file" id="polaroidInput1" accept="image/*" onchange="handleLiveImageUpload(this, 'polaroidImg1')">
+              <input type="file" id="polaroidInput2" accept="image/*" onchange="handleLiveImageUpload(this, 'polaroidImg2')">
+              <input type="file" id="polaroidInput3" accept="image/*" onchange="handleLiveImageUpload(this, 'polaroidImg3')">
+            </div>
+          </div>
+
+          <div class="field-row">
+            <label>Spotify Album Photo & Song (Step 4):</label>
+            <div class="input-group">
+              <input type="file" id="spotifyCoverInput" accept="image/*" onchange="handleLiveImageUpload(this, 'spotifyAlbumImg')">
+              <input type="file" id="spotifySongInput" accept="audio/*" onchange="handleLiveAudioUpload(this)">
+            </div>
+            <div class="track-inputs mt-2">
+              <input type="text" id="customSongTitle" placeholder="Song Name (e.g. Tum Hi Ho / Perfect)" oninput="updateSongTitle(this.value)">
+              <input type="text" id="customArtist" placeholder="Artist Name / For My Duffer" oninput="updateArtist(this.value)">
+            </div>
+          </div>
+
+          <div class="field-row">
+            <label>Special Gallery Photos (Step 5):</label>
+            <div class="input-group">
+              <input type="file" accept="image/*" onchange="handleLiveImageUpload(this, 'galleryImg1')">
+              <input type="file" accept="image/*" onchange="handleLiveImageUpload(this, 'galleryImg2')">
+              <input type="file" accept="image/*" onchange="handleLiveImageUpload(this, 'galleryImg3')">
+              <input type="file" accept="image/*" onchange="handleLiveImageUpload(this, 'galleryImg4')">
+            </div>
+          </div>
+        </div>
+
+        <button class="save-modal-btn" onclick="closeCustomizer()">Done & Keep Browsing 💕</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Image Lightbox Modal for Zooming -->
+  <div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox()">
+    <span class="lightbox-close">&times;</span>
+    <img id="lightboxImg" src="" alt="Zoomed view">
+    <p id="lightboxCaption"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
